@@ -1,0 +1,191 @@
+/**
+ * General page resets
+ */
+body, html {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	background: #c6c6c6 url(../img/bgBody.png) repeat-x top left;
+	font-family: Helvetica;
+}
+
+@media all and (min-resolution: 200dpi) {
+	body, html {
+		font-size: 20px;
+	}
+}
+
+@media all and (min-resolution: 250dpi) {
+	body, html {
+		font-size: 40px;
+	}
+}
+
+/**
+ * General classes
+ */
+
+.displayNone {
+	display: none;
+}
+
+/**
+ * Page styling
+ */
+.statusBar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 1.5em;
+	border: 1px solid white;
+	border-width: 0 0 1px 0;
+	background: #727272 url(../img/bgStatus.png) repeat-x top left;
+	z-index: 100;
+	color: white;
+	white-space: nowrap;
+}
+
+	.statusBar .filterBy {
+		font-size: 0.7em;
+	}
+
+	.statusBar .breadcrumb {
+		display: inline-block;
+		-moz-display: inline-block;
+		padding: 0.25em 0 0 0.25em;
+	}
+	
+	.statusBar .breadcrumb span {
+		white-space: pre;
+	}
+
+.content {
+	margin: 1.8em 0.25em 0.25em;
+	border: 1px solid #424242;
+	background: #f2f2f2;
+}
+
+	.content .row {
+		padding: 0.25em 0.25em 0.25em 0.25em;
+		position: relative;
+		border-bottom: 1px solid #ccc;
+		overflow: hidden; /* If content doesnt wrap dont let it flow out of the box, as e.g. window.addEventListener would */
+		display: block;
+	}
+	
+	.content .row:active {
+		background-color: white;
+	}
+	
+	.content .row:first-child {
+		border-top: none;
+	}
+
+	.content .row:last-child {
+		border-bottom: none;
+	}
+
+		.content .row.classType_object {
+			background-color: #FEE2AE; /* orange = #ffa500 */
+		}
+		
+		.content .row.classType_object:nth-child(odd) {
+			background-color: #FFF2DA; /* orange = #ffa500 */
+		}
+		
+		.content .row.classType_property {
+			background-color: #C5FAFF;
+		}
+	
+		.content .row.classType_property:nth-child(odd) {
+			background-color: #E8FCFE;
+		}
+	
+		.content .row.classType_method:nth-child(odd) {
+			background-color: white;
+		}
+	
+		.content .row.classType_object + .row.classType_method,
+		.content .row.classType_method + .row.classType_property {
+			border-top: 1px solid #424242;
+			margin-top: -1px;
+		}
+		
+		.content .row .value {
+			color: grey;
+			font-size: smaller;
+		}
+		
+		.content .row .error {
+			color: red;
+			font-size: smaller;
+			opacity:0.5;
+		}
+		
+		.content div:first-child {
+			border-top-width: 0px;
+		}
+		
+		.content .type {
+			padding: 0.25em;
+			border: 1px solid #424242;
+			border-width: 1px 0;
+		}
+		
+		.content pre {
+			padding: 0.25em;
+			/*white-space: normal;*/
+			font-size: 60%;
+		}
+		
+		.content .execute {
+			padding: 0.25em;
+		}
+		
+		.content .execute + .result {
+			background-color: #FDD;
+			padding: 0.2em;
+		}
+
+
+.floatingNav {
+	position: fixed;
+	top: 27%;
+	right: 0;
+	background-color: #f2f2f2;
+	border: 1px solid white;
+	border-right: none;
+	color: white;
+	opacity: 0.9;
+}
+
+	.floatingNav .item {
+		border-bottom: 1px solid white;
+		padding: 0.2em;
+		background: #727272;
+		display: block;
+		text-decoration: none;
+		color: white;
+	}
+	
+		.floatingNav .item.linkToObject {
+			background-color: orange;
+		}
+	
+		.floatingNav .item.linkToProperty {
+			background-color: cadetBlue;
+		}
+	
+		.floatingNav .item:last-child {
+			border-bottom: none;
+		}
+	
+	.floatingNav .count{
+		font-size: small;
+	}
+	
+	.floatingNav .info{
+		font-size: small;
+		text-align: center;
+	}

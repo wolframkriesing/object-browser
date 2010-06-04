@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Object Browser</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+<body>
+	<div class="statusBar">
+		<span class="breadcrumb">Loading...</span>
+		<input class="filterBy" type="text" size="5" />
+		<button>GO</button>
+	</div>
+	
+	<div class="content">
+	</div>
+	
+	<div class="floatingNav">
+		<a class="item linkToObject" href="#objects">
+			<span class="typeOf">O</span>
+			<span class="count numObjects">0</span>
+			<div class="info">Objects</div>
+		</a>
+		
+		<a class="item linkToFunction" href="#functions">
+			<span class="typeOf">F</span>
+			<span class="count numFunctions">0</span>
+			<div class="info">Functions</div>
+		</a>
+		<a class="item linkToProperty" href="#properties">
+			<span class="typeOf">P</span>
+			<span class="count numProperties">0</span>
+			<div class="info">Properties</div>
+		</a>
+	</div>
+	
+	<script type="text/javascript" src="js/dojo.js"></script>
+	<script type="text/javascript" src="js/reflection.js"></script>
+	<script type="text/javascript" src="js/browser.js"></script>
+</body>
+</html>
