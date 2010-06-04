@@ -1,16 +1,20 @@
 var browser = {
-	execute:function(funcName){
+	execute:function(funcName, param){
 		var objName = funcName.replace(/\.[^.]*$/, ""); // Remove the function name at the end.
 		var fncName = funcName.split(".").pop(); // Extract the object/scope where the function shall be called in.
 		var ref = dojo.getObject(funcName);
 		var ret = null;
 		if (ref){
 			try{
-				ret = "returns: " + ref.apply(dojo.getObject(objName), []);
+				ret = "returns: " + ref.apply(dojo.getObject(objName), param ? [param] : []);
 			}catch(e){
 				ret = [];
 				for (var key in e){
-					ret.push(key+": "+e[key]);
+					try{
+						ret.push(key + ": " + e[key]);
+					}catch(ex){
+						
+					}
 				}
 				ret = ret.join("<br />");
 			}
@@ -34,7 +38,8 @@ var render;
 			'<button class="objectName" onclick="render(\'${fullObjectName}\')">${objectName}</button>.'
 		,
 		FUNCTION:
-			'<div class="execute" onclick="browser.execute(\'${functionName}\')">Execute (Without params)</div>'
+			'<a class="execute" onclick="browser.execute(\'${functionName}\')">Execute (Without params)</a>'+
+			'<a class="execute" onclick="browser.execute(\'${functionName}\', \'nothing\')">Execute (With param "nothing")</a>'
 		,
 		FUNCTION_RESULT:
 			'<div class="result displayNone"></div>'
