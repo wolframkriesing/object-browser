@@ -10,16 +10,9 @@ body, html {
 	font-family: Helvetica;
 }
 
-@media all and (min-resolution: 200dpi) {
-	body, html {
-		font-size: 20px;
-	}
-}
-
-@media all and (min-resolution: 250dpi) {
-	body, html {
-		font-size: 40px;
-	}
+body, html {
+	/* Including padding and stuff this should be enough for the height to be well clickable. */
+	font-size: 0.3cm; 
 }
 
 /**
