@@ -2,6 +2,10 @@
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:jil="http://www.jil.org/ns/widgets1.2"
 	id="http://widgets.uxebu.com/widget/object-browser" version="0.4"
 	width="800" height="1000">
+	<!--Actually only the Opera 9.64 needs the following tags, otherwise it looks pretty ugly there. -->
+	<width>800</width>
+	<height>1000</height>
+	
 	<name>Object Browser</name>
 	<icon src="img/icon.png"/>
 	<jil:maximum_display_mode height="800" width="1000"/>
@@ -49,6 +53,7 @@
 	<feature name="http://jil.org/jil/api/1.2/device" required="false"/>
 		
 	<access network="true" localfs="true"/> <!-- until JIL 1.1 this was enough -->
-	<jil:access network="true" localfs="true" remote_scripts="true"/> <!-- this is needed for JIL1.2 -->
+	<!-- this is needed for JIL1.2 -->
+	<jil:access network="true" localfs="true" remote_scripts="true"/> 
 
 </widget>
