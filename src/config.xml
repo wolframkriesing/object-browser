@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:jil="http://www.jil.org/ns/widgets1.2"
-	id="http://widgets.uxebu.com/widget/object-browser" version="0.4"
-	width="800" height="1000">
+	version="0.4"
+	width="800" height="1000" id="http://jil.org/wid/cc4b75128e6bc033fb7f40e7a8818a7c5311dff8c8b6a8b69f0376214ae8d0b1/Object%20Browser">
 	<!--Actually only the Opera 9.64 needs the following tags, otherwise it looks pretty ugly there. -->
 	<width>800</width>
 	<height>1000</height>
+	<description>
+		This widget lets you inspect and play around with the JavaScript objects that are available in this widget environment.
+		It can be very helpful when exploring e.g. the APIs (like JIL, under "window.Widget") of the widget.
+	</description>
 	
 	<name>Object Browser</name>
 	<icon src="img/icon.png"/>
@@ -51,8 +55,9 @@
 	
 	<feature name="http://jil.org/jil/api/1.2/widget" required="false"/>
 	<feature name="http://jil.org/jil/api/1.2/device" required="false"/>
-		
-	<access network="true" localfs="true"/> <!-- until JIL 1.1 this was enough -->
+	
+	<!-- until JIL 1.1 this was enough -->
+	<access network="true" localfs="true"/>
 	<!-- this is needed for JIL1.2 -->
 	<jil:access network="true" localfs="true" remote_scripts="true"/> 
 
