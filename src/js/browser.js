@@ -38,8 +38,9 @@ var render;
 			'<button class="objectName" onclick="render(\'${fullObjectName}\')">${objectName}</button>.'
 		,
 		FUNCTION:
-			'<a class="execute" onclick="browser.execute(\'${functionName}\')">Execute (Without params)</a>'+
-			'<a class="execute" onclick="browser.execute(\'${functionName}\', \'nothing\')">Execute (With param "nothing")</a>'
+			'<a class="execute" onclick="browser.execute(\'${functionName}\')">call: <code>${functionName}()</code></a>'+
+			'<hr />'+
+			'<a class="execute" onclick="browser.execute(\'${functionName}\', \'nothing\')">call: <code>${functionName}("nothing")</code></a>'
 		,
 		FUNCTION_RESULT:
 			'<div class="result displayNone"></div>'
