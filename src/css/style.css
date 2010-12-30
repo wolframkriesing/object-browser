@@ -11,8 +11,30 @@ body, html {
 
 body, html {
 	/* Including padding and stuff this should be enough for the height to be well clickable. */
-	font-size: 0.3cm; 
+	/*font-size: 0.3cm; */
+	font-size: 20px; 
 }
+
+/*
+	Samsung Galaxy S I9000 186 PPI
+*/
+/*@media all and (min-resolution: 200dpi) {*/
+@media only screen and (min-device-width: 300px) {
+	body, html {
+		font-size: 25px;
+	}
+}
+
+/*
+	Desire Z has 252 PPI
+*/
+/*@media all and (min-resolution: 250dpi) {*/
+@media only screen and (min-device-width: 400px) {
+	body, html {
+		font-size: 30px;
+	}
+}
+
 
 /**
  * General classes
